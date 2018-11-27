@@ -1,0 +1,130 @@
+/*index css*/
+body.index
+{
+background-image: url("https://www.tamron.eu/fileadmin/user_upload/magazin/moody-food/dark_moody_mystic_light_chiaroscuro_food_photography.jpg"); no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+-o-background-size: cover;
+}
+
+.checkbox-grid li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+body{
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/restaurant_icons.png"); no repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+/*makes images appear circular*/
+.image-cropper {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+/* index styling */
+
+.navbar{
+  background-color: #DE6262;
+}
+.nav-item{
+  color:#FFF;
+}
+#logo{
+  width: 25%;
+}
+
+header.masthead {
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+header.masthead .intro-text {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+header.masthead .intro-text .intro-lead-in {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 22px;
+  margin-bottom: 25px;
+}
+
+header.masthead .intro-text .intro-heading {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+
+.btn-default {
+  color: #ffffff;
+  background-color: #DE6262;
+  border-color: #DE6262;
+}
+
+.btn-active{
+  color: #ffffff;
+  background-color: #FFB88C;
+  border-color: #DE6262;
+}
+
+#row1{
+  margin-top: 100px;
+}
+
+#addimage{
+  margin-bottom: 25px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.column{
+  position: relative;
+  display: inline-block;
+}
+.wrapper{
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.containerAdd{
+  width:60%;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,.6);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.containerFridge{
+  margin-top: 20px;
+  margin:0 auto;
+  width:80%;
+  background-color: rgba(255,255,255,.6);
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.checkbox-grid li {
+    display: block;
+    float: left;
+    width: 25%;
+}

@@ -1,0 +1,65 @@
+header,footer,aside{
+    display: block;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+label{
+    width: 450px;
+    display: block;
+}
+
+table{
+    width: 1100px;
+    padding: 0px;
+    border-collapse: collapse;
+}
+th{
+    background: #ff9999;
+}
+th,td{
+    border: 1px dotted gray;
+    padding: 15px;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+.headerbar{
+    width: 1110px;
+    float: left;
+}
+.headerbar.top{
+  position: absolute;
+    padding: 30px;
+    align: center;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffcc 100%);
+    min-height: 100px;
+    left: 138px;
+
+}
+.headerbar.bottom{
+    min-height: 60px;
+}
+.leftbar{
+    width: 462px;
+    background: #a6b6dd;
+    min-height: 600px;
+    float: left;
+    padding: 50px;
+}
+.rightbar{
+    width: 1400px;
+    background: #fffbf2;
+    min-height: 580px;
+    float: none;
+    padding: 30px;
+}
+
+
+.checkbox-grid li {
+    display: block;
+    float: left;
+    width: 25%;
+}

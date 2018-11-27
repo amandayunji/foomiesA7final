@@ -1,0 +1,88 @@
+
+            var foodArray = [];
+            function init() {
+                if (window.localStorage.foodRecord) {
+                    foodArray = JSON.parse(window.localStorage.foodRecord);
+                    for (var i = 0; i < foodArray.length; i++) {
+                        prepareTableCell(foodArray[i].grocery, foodArray[i].owner,
+                        foodArray[i].expdate, foodArray[i].communal, foodArray[i].quantity, foodArray[i].notes);
+                    }
+                }
+            }
+            function onRegisterPressed() {
+                var grocery = document.getElementById("grocery").value;
+                var owner = document.getElementById("owner").value;
+                var expdate = document.getElementById("expdate").value;
+                var communal = document.getElementById("communal").value;
+                var quantity = document.getElementById("quantity").value;
+                var notes = document.getElementById("notes").value;
+
+                var foodObj = {grocery: grocery, owner: owner, expdate: expdate, communal: communal, quantity: quantity, notes: notes};
+                foodArray.push(foodObj);
+                window.localStorage.foodRecord = JSON.stringify(foodArray);
+                prepareTableCell(grocery, owner, expdate, communal, quantity, notes);
+                document.getElementById("grocery").value = "";
+                document.getElementById("owner").value = "";
+                document.getElementById("expdate").value = "";
+                document.getElementById("communal").value = "";
+                document.getElementById("quantity").value = "";
+                document.getElementById("notes").value = "";
+
+            }
+            function prepareTableCell(grocery, owner, expdate, communal, quantity, notes) {
+                var table = document.getElementById("regtable");
+                var row = table.insertRow();
+                var imgCell = row.insertCell(0);
+                var groceryCell = row.insertCell(1);
+                var ownerCell = row.insertCell(2);
+                var expdateCell = row.insertCell(3);
+                var communalCell = row.insertCell(4);
+                var quantCell = row.insertCell(5);
+                var notesCell = row.insertCell(6);
+
+                groceryCell.innerHTML = grocery;
+                ownerCell.innerHTML = owner;
+                expdateCell.innerHTML = expdate;
+                communalCell.innerHTML = communal;
+                quantCell.innerHTML = quantity;
+                notesCell.innerHTML = notes;
+                if(grocery=="asparagus") {
+                  imgCell.innerHTML = "<img src='Images/asparagus.png'>";
+                }
+              else if(grocery=="broccoli") {
+                  imgCell.innerHTML = "<img src='Images/broccoli.png'>";
+                }
+              else if(grocery=="egg") {
+                    imgCell.innerHTML = "<img src='Images/egg.png'>";
+                  }
+                  else if(grocery=="garlic") {
+                     imgCell.innerHTML = "<img src='Images/garlic.png'>";
+                   }
+                   else if(grocery=="lemon") {
+                      imgCell.innerHTML = "<img src='Images/lemon.png'>";
+                    }
+                    else if(grocery=="onion") {
+                       imgCell.innerHTML = "<img src='Images/onion.png'>";
+                     }
+                     else if(grocery=="steak") {
+                        imgCell.innerHTML = "<img src='Images/steak.png'>";
+                      }
+                      else if(grocery=="pasta") {
+                         imgCell.innerHTML = "<img src='Images/pasta.png'>";
+                       }
+                       else if(grocery=="potato") {
+                          imgCell.innerHTML = "<img src='Images/potato.png'>";
+                        }
+                        else if(grocery=="spinach") {
+                           imgCell.innerHTML = "<img src='Images/spinach.png'>";
+                         }
+                         else if(grocery=="salmon") {
+                            imgCell.innerHTML = "<img src='Images/salmon.png'>";
+                          }
+                          else if(grocery=="tomato") {
+                             imgCell.innerHTML = "<img src='Images/tomato.png'>";
+                           }
+                           else if(grocery=="chicken") {
+                              imgCell.innerHTML = "<img src='Images/chicken.png'>";
+                            }
+            }

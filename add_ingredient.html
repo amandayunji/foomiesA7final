@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link href="CSS/style.css" rel="stylesheet">
+			<script type="text/javascript" src="JS/addfood.js"></script>
+			<script type="text/javascript" src="JS/iconselect.js"></script>
+			<script type="text/javascript" src="JS/iscroll.js"></script>
+			<link href="CSS/bootstrap.min.css" rel="stylesheet">
+			<link href="CSS/bootstrap-theme.min.css" rel="stylesheet">
+			<link href="CSS/foomies.css" rel="stylesheet">
+			<link href="CSS/bootstrap.min.css" rel="stylesheet">
+			<link href="CSS/bootstrap-theme.min.css" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="CSS/iconselect.css">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<!-- this is a comment in HTML -->
+	    <title>My Fridge</title>
+	  </head>
+
+	  <body>
+	    <!-- Navigation -->
+	    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+	      <div class="container">
+	        <a href="index.html">
+	        <img class= "navbar-brand" id="logo" src="Images/foomiesLogoWhite.png">
+	      </a>
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarResponsive">
+	          <ul class="navbar-nav ml-auto">
+	            <li class="nav-item">
+	              <a class="nav-link" href="index.html">Home
+	                <span class="sr-only">(current)</span>
+	              </a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="fridge.html">My Fridge</a>
+	            </li>
+	            <li class="nav-item active">
+	              <a class="nav-link" href="add_ingredient.html">Add a Grocery</a>
+	            </li>
+	            <li class="nav-item">
+	               <a href="#myModal" role="button" data-toggle="modal" class="nav-link" >Add a Foomie</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="recipe_generator.html">Find A Recipe</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="landing.html">Log Out</a>
+	            </li>
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
+			<!-- Modal -->
+			<div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">Add a Roommate</h4>
+						</div>
+						<div class="modal-body">
+
+							<center>
+							<form action="index.html" method="post" name="Login_Form" class="form-signin">
+								<center>
+									<h3 class="form-signin-heading">Add a roommate!</h3>
+									<input type="text" class="form-control" id="newRoomName"name="Username" placeholder="First Name" required="" autofocus="" />
+									<input type="text" class="form-control" placeholder="Last Name" required="" autofocus="" />
+									<input type="password" class="form-control" name="Password" placeholder="Email" required=""/>
+								</form>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-default" onclick="addRoommate()" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+<br><br><br><br>
+<div class="containerAdd">
+	<center>
+	<form action="index.html">
+		<h3> Select food: </h3>
+		<input type="image" id = "foodimage" name="Food Icon" value=""><br>
+		<br>
+		<script>
+						var iconSelect;
+						var selectedText;
+
+						window.onload = function(){
+
+								selectedText = document.getElementById('selected-text');
+
+								document.getElementById('my-icon-select').addEventListener('changed', function(e){
+									 selectedText.value = iconSelect.getSelectedValue();
+								});
+
+								iconSelect = new IconSelect("my-icon-select");
+
+								var icons = [];
+								icons.push({'iconFilePath':'Images/tomato.png', 'iconValue':'tomato'});
+								icons.push({'iconFilePath':'Images/broccoli.png', 'iconValue':'broccoli'});
+								icons.push({'iconFilePath':'Images/onion.png', 'iconValue':'onion'});
+								icons.push({'iconFilePath':'Images/chicken.png', 'iconValue':'chicken'});
+								icons.push({'iconFilePath':'Images/lemon.png', 'iconValue':'lemon'});
+								icons.push({'iconFilePath':'Images/garlic.png', 'iconValue':'garlic'});
+								icons.push({'iconFilePath':'Images/asparagus.png', 'iconValue':'asparagus'});
+								icons.push({'iconFilePath':'Images/egg.png', 'iconValue':'egg'});
+								icons.push({'iconFilePath':'Images/pasta.png', 'iconValue':'pasta'});
+								icons.push({'iconFilePath':'Images/potato.png', 'iconValue':'potato'});
+								icons.push({'iconFilePath':'Images/salmon.png', 'iconValue':'salmon'});
+								icons.push({'iconFilePath':'Images/steak.png', 'iconValue':'steak'});
+
+								iconSelect.refresh(icons);
+						};
+						</script>
+
+						        <div id="my-icon-select"></div>
+						        <input type="foodValue" id="selected-text" name="selected-text" style="width:65px;">
+										<br>
+										<br>
+			  <font size = 3>  Owner of item: <input type="ownerValue" id = "owner" name="Owner of Item" value=""></font><br>
+			    <br>
+
+			<body>
+			<font size = 3>Expiration Date: <input type="date" id="datepicker" value=""></font>
+			</body>
+			<br>
+			<br>
+			  <font size = 3>  Communal? </font>
+			    <input type="radio" id = "communal" name="Communal?" value="Yes"> <font size = 3>Yes</font>
+			    <input type="radio" id = "communal" name="Communal?" value="No"> <font size = 3>No</font>
+					<br>
+			    <br>
+					<font size = 3>Quantity: </font><input type="note" id ="foodNote" name="Notes" value=""> <br>
+			    <br>
+			    <font size = 3>Notes: </font><input type="note" id ="foodNote" name="Notes" value=""> <br>
+			    <br>
+			    <a href = "index.html">
+			    <button id="testjs" class="btn btn-warning btn-lg">Cancel</button>
+			  </a>
+			   <a href="fridge.html"> <button type="save" class="savebtn btn-lg" onclick="save()">Add</button></a>
+			    </form>
+			    <br>
+			    <p>Click "Add" and the ingredient will be added to your fridge!</p>
+			  </center>
+			</div>
+			</body>

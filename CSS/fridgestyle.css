@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.checkbox-grid li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+header,footer,aside{
+    display: block;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+label{
+    width: 450px;
+    display: block;
+}
+input{
+    width: 200px;
+}
+table{
+    width: 710px;
+    border-collapse: collapse;
+}
+th{
+    background: #ff9999;
+}
+th,td{
+    border: 1px dotted gray;
+    padding: 15px;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+.headerbar{
+    width: 1110px;
+    float: left;
+}
+.headerbar.top{
+ padding: 30px;
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffcc 100%);
+    min-height: 100px;
+}
+.headerbar.bottom{
+    min-height: 60px;
+}
+.leftbar{
+    width: 300px;
+    background: #a6b6dd;
+    min-height: 600px;
+    float: left;
+    padding: 50px;
+}
+.rightbar{
+    width: 700px;
+    background: #fffbf2;
+    min-height: 580px;
+    float: left;
+    padding: 18px;
+}
+
+.checkbox-grid li {
+    display: block;
+    float: left;
+    width: 25%;
+}
